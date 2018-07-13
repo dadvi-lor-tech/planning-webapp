@@ -3,11 +3,9 @@ package com.planning.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.planning.dao.UserDAO;
 import com.planning.model.Profile;
 import com.planning.model.RightsStatus;
 //import com.planning.dao.UserDao;
@@ -17,10 +15,8 @@ import com.planning.model.User;
 @Transactional
 public class UserServiceImpl implements UserService {
 
-	// This means to get the bean called userDao which is auto-implemented by
-	// Spring, we will use it to handle the data
-	//@Autowired
-	//private UserDAO userDAO;
+//	@Autowired
+//	private UserDAO userDAO;
 
 	// TODO: Supprimer méthode mockup et récupérer la liste des utilisateurs en
 	// base de données

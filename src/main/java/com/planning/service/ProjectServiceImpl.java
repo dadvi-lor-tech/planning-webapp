@@ -24,12 +24,34 @@ public class ProjectServiceImpl implements ProjectService {
 	@Autowired
 	private UserService userService;
 
+	//TODO: fix method
+	// Calcule le vrai budget du projet en fonction du nombre de jours de charge par
+	// contributeur et des TJM spécifiques au projet
+	/*public float calculateRealBudget(Project project) {
+		float realBudget = 0;
+		List<Phase> phases = project.getPhases();
+		// itération sur chaque phase du projet
+		for (Phase phase : phases) {
+			Map<User, Integer> phaseContributors = phase.getContributors();
+			// itération sur chaque contributeur au projet
+			for (Map.Entry<User, Integer> entry : phaseContributors.entrySet()) {
+				// récupère le tjm du contributeur (spécifique à ce projet)
+				Float realTjm = project.getContributors().get(entry.getKey());
+				// produit du tjm et du nombre de jours travaillés par ce contributeur pour
+				// cette phase
+				realBudget += realTjm * entry.getValue();
+			}
+		}
+		return realBudget;
+	}*/
+
 	// TODO: find project in database
 	public Project findProjectById(long id) {
 
-		if (id != 2) return null; // Simule le fait que l'on ait qu'un projet d'id 2 en BDD
-		
-		Project proj = new Project(2, "Projet2", 1000, null, null, null);
+		if (id != 2)
+			return null; // Simule le fait que l'on ait qu'un projet d'id 2 en BDD
+
+		Project proj = new Project(2, "Projet2", 1000, null);
 
 		proj.setPhases(phaseService.findPhasesByProjectId(id));
 		proj.setContributors(populateProject());
@@ -43,8 +65,8 @@ public class ProjectServiceImpl implements ProjectService {
 		Profile profil1 = new Profile(1, "TestProfile", (float) 100.0);
 		User admin1 = new User(12, "Jean", "Dupont", profil1, RightsStatus.ADMIN);
 
-		Project projet1 = new Project(1, "projet1", 3000, new HashMap<User, Float>(), new ArrayList<Phase>(), admin1);
-		Project projet2 = new Project(2, "projet2", 3000, new HashMap<User, Float>(), new ArrayList<Phase>(), admin1);
+		Project projet1 = new Project(1, "projet1", 3000, admin1);
+		Project projet2 = new Project(2, "projet2", 3000, admin1);
 
 		User user1 = new User(RightsStatus.BASIC_USER);
 		user1.setId(1);

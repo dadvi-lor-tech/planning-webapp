@@ -23,7 +23,6 @@ public class User implements Serializable {
 	@ManyToOne
 	private Profile profile;
 	private RightsStatus rightsStatus;
-	//private List<User> impactedUsers;
 	@ManyToMany
 	private List<Project> projects;
 //	@OneToMany
@@ -101,14 +100,6 @@ public class User implements Serializable {
 //
 //	public void setCharges(List<Charge> charges) {
 //		this.charges = charges;
-//	}
-
-//	public List<User> getImpactedUsers() {
-//		return impactedUsers;
-//	}
-//
-//	public void setImpactedUsers(List<User> impactedUsers) {
-//		this.impactedUsers = impactedUsers;
 //	}
 
 }

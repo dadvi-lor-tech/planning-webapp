@@ -19,7 +19,6 @@ public class Profile implements Serializable {
 	private long id;
 	private String name;
 	private float tjmBase;
-	private float tjmReal;
 	@OneToMany
 	private List<User> users;
 
@@ -58,14 +57,6 @@ public class Profile implements Serializable {
 		this.tjmBase = tjmBase;
 	}
 
-	public float getTjmReal() {
-		return tjmReal;
-	}
-
-	public void setTjmReal(float tjmReal) {
-		this.tjmReal = tjmReal;
-	}
-	
 	public List<User> getUsers() {
 		return users;
 	}
