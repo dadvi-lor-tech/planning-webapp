@@ -28,14 +28,10 @@ public class Phase implements Serializable {
 	private String startEvent;
 	private String endEvent;
 	private List<Phase> prerequisites;
-	//private String startDescription;
-	//private String endDescription;
 	@ManyToOne
 	private Project parentProject;
 	@OneToMany  
 	private Map<User, List<Charge>> charges;
-//	@OneToMany
-//	private List<User> contributors; // Mappés à une liste de charges directement
 
 	// CONSTRUCTORS
 	public Phase() {
@@ -71,14 +67,6 @@ public class Phase implements Serializable {
 //
 //	public void setCharges(Map<YearMonth, Charge> charges) {
 //		this.charges = charges;
-//	}
-//
-//	public List<User> getContributors() {
-//		return contributors;
-//	}
-//
-//	public void setContributors(List<User> contributors) {
-//		this.contributors = contributors;
 //	}
 
 	public Date getStartDate() {
@@ -136,21 +124,5 @@ public class Phase implements Serializable {
 	public void setPrerequisites(List<Phase> prerequisites) {
 		this.prerequisites = prerequisites;
 	}
-
-//	public String getStartDescription() {
-//		return startDescription;
-//	}
-//
-//	public void setStartDescription(String startDescription) {
-//		this.startDescription = startDescription;
-//	}
-//
-//	public String getEndDescription() {
-//		return endDescription;
-//	}
-//
-//	public void setEndDescription(String endDescription) {
-//		this.endDescription = endDescription;
-//	}
 
 }
