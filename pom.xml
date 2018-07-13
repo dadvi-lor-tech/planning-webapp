@@ -139,12 +139,6 @@
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
 			</plugin>
-			<!-- TODO: try to add following line (doesn't work right now but maybe 
-				it's useless) -->
-			<!-- <plugin> -->
-			<!-- <groupId>org.springframework.boot</groupId> -->
-			<!-- <artifactId>spring-boot-maven-plugin</artifactId> -->
-			<!-- </plugin> -->
 		</plugins>
 	</build>
 

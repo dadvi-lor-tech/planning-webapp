@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -11,6 +12,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+@Entity
 public class Project implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -21,19 +23,17 @@ public class Project implements Serializable {
 	private String name;
 	private float budget;
 	@ManyToMany
-	private Map<User, Float> contributors; // Associate User with TJM
+	private Map<User, Float> contributors; // Associate User with real TJM for this project
 	@OneToMany
 	private List<Phase> phases;
 	@ManyToOne
 	private User admin;
 
 	// CONSTRUCTORS
-	public Project(long id, String name, float budget, Map<User, Float> contributors, List<Phase> phases, User admin) {
+	public Project(long id, String name, float budget, User admin) {
 		this.id = id;
 		this.name = name;
 		this.budget = budget;
-		this.contributors = contributors;
-		this.phases = phases;
 		this.admin = admin;
 	}
 

@@ -1,7 +1,6 @@
 package com.planning.model;
 
 import java.io.Serializable;
-import java.time.YearMonth;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -60,14 +59,6 @@ public class Phase implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
-
-//	public Map<YearMonth, Charge> getCharges() {
-//		return charges;
-//	}
-//
-//	public void setCharges(Map<YearMonth, Charge> charges) {
-//		this.charges = charges;
-//	}
 
 	public Date getStartDate() {
 		return startDate;
