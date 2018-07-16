@@ -16,7 +16,7 @@
 	
 	<mvc:annotation-driven />
 	
-	<context:component-scan base-package="com.planning.service, com.planning.web" />	
+	<context:component-scan base-package="io.github.trochel.planning.service, io.github.trochel.planning.web" />	
 
 	<bean class="org.springframework.data.web.config.SpringDataWebConfiguration" />
 
