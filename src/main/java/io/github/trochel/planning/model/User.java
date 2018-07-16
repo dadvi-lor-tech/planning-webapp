@@ -9,7 +9,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
 @Entity
 public class User implements Serializable {
@@ -25,9 +24,8 @@ public class User implements Serializable {
 	private RightsStatus rightsStatus;
 	@ManyToMany
 	private List<Project> projects;
-//	@OneToMany
-//	private List<Charge> charges;
-
+	// @OneToMany
+	// private List<Charge> charges;
 
 	// CONSTRUCTORS
 	public User(long id, String firstName, String lastName, Profile profile, RightsStatus rightsStatus) {
@@ -85,7 +83,7 @@ public class User implements Serializable {
 	public void setProfile(Profile profile) {
 		this.profile = profile;
 	}
-	
+
 	public List<Project> getProjects() {
 		return projects;
 	}
@@ -94,12 +92,12 @@ public class User implements Serializable {
 		this.projects = projects;
 	}
 
-//	public List<Charge> getCharges() {
-//		return charges;
-//	}
-//
-//	public void setCharges(List<Charge> charges) {
-//		this.charges = charges;
-//	}
+	// public List<Charge> getCharges() {
+	// return charges;
+	// }
+	//
+	// public void setCharges(List<Charge> charges) {
+	// this.charges = charges;
+	// }
 
 }

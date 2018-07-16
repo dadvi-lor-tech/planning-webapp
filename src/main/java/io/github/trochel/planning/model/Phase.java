@@ -29,7 +29,7 @@ public class Phase implements Serializable {
 	private List<Phase> prerequisites;
 	@ManyToOne
 	private Project parentProject;
-	@OneToMany  
+	@OneToMany
 	private Map<User, List<Charge>> charges;
 
 	// CONSTRUCTORS

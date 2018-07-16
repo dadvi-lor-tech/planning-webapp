@@ -14,8 +14,8 @@ import io.github.trochel.planning.model.User;
 @Transactional
 public class UserServiceImpl implements UserService {
 
-//	@Autowired
-//	private UserDAO userDAO;
+	// @Autowired
+	// private UserDAO userDAO;
 
 	// TODO: Supprimer méthode mockup et récupérer la liste des utilisateurs en
 	// base de données

@@ -8,7 +8,6 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import io.github.trochel.planning.model.Phase;
 import io.github.trochel.planning.model.Profile;
 import io.github.trochel.planning.model.Project;
 import io.github.trochel.planning.model.RightsStatus;
@@ -24,26 +23,20 @@ public class ProjectServiceImpl implements ProjectService {
 	@Autowired
 	private UserService userService;
 
-	//TODO: fix method
+	// TODO: fix method
 	// Calcule le vrai budget du projet en fonction du nombre de jours de charge par
 	// contributeur et des TJM spécifiques au projet
-	/*public float calculateRealBudget(Project project) {
-		float realBudget = 0;
-		List<Phase> phases = project.getPhases();
-		// itération sur chaque phase du projet
-		for (Phase phase : phases) {
-			Map<User, Integer> phaseContributors = phase.getContributors();
-			// itération sur chaque contributeur au projet
-			for (Map.Entry<User, Integer> entry : phaseContributors.entrySet()) {
-				// récupère le tjm du contributeur (spécifique à ce projet)
-				Float realTjm = project.getContributors().get(entry.getKey());
-				// produit du tjm et du nombre de jours travaillés par ce contributeur pour
-				// cette phase
-				realBudget += realTjm * entry.getValue();
-			}
-		}
-		return realBudget;
-	}*/
+	/*
+	 * public float calculateRealBudget(Project project) { float realBudget = 0;
+	 * List<Phase> phases = project.getPhases(); // itération sur chaque phase du
+	 * projet for (Phase phase : phases) { Map<User, Integer> phaseContributors =
+	 * phase.getContributors(); // itération sur chaque contributeur au projet for
+	 * (Map.Entry<User, Integer> entry : phaseContributors.entrySet()) { // récupère
+	 * le tjm du contributeur (spécifique à ce projet) Float realTjm =
+	 * project.getContributors().get(entry.getKey()); // produit du tjm et du nombre
+	 * de jours travaillés par ce contributeur pour // cette phase realBudget +=
+	 * realTjm * entry.getValue(); } } return realBudget; }
+	 */
 
 	// TODO: find project in database
 	public Project findProjectById(long id) {
