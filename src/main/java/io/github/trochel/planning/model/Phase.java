@@ -30,7 +30,7 @@ public class Phase implements Serializable {
 	@ManyToOne
 	private Project parentProject;
 	@OneToMany
-	private Map<User, List<Charge>> charges;
+	private Map<User, List<Charge>> chargesByUser;
 
 	// CONSTRUCTORS
 	public Phase() {
@@ -72,12 +72,12 @@ public class Phase implements Serializable {
 		this.parentProject = parentProject;
 	}
 
-	public Map<User, List<Charge>> getCharges() {
-		return charges;
+	public Map<User, List<Charge>> getChargesByUser() {
+		return chargesByUser;
 	}
 
-	public void setCharges(Map<User, List<Charge>> charges) {
-		this.charges = charges;
+	public void setChargesByUser(Map<User, List<Charge>> chargesByUser) {
+		this.chargesByUser = chargesByUser;
 	}
 
 	public void setStartDate(Date startDate) {

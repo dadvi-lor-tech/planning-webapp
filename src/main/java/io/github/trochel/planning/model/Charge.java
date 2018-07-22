@@ -17,7 +17,7 @@ public class Charge implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
-	private int year; // A peut être rechanger
+	private int year; // Peut-être à rechanger
 	private int monthNumber;
 	private float numberOfDaysEstim;
 	private float numberOfDaysReal;
